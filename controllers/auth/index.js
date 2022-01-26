@@ -76,7 +76,6 @@ const logout = async (req, res, next) => {
 const current = async (req, res) => {
   try {
     const { email } = req.user;
-    console.log(req.user);
     if (!req.user.token || !req.user.id) {
       return res.status(HttpCode.UNAUTHORIZED).json({
         status: "error",
